@@ -1,0 +1,22 @@
+rm -rf /opt/opentenbase/src/OpenTenBase/contrib/pgvector/tmp_check
+cd . && TESTDIR='/opt/opentenbase/src/OpenTenBase/contrib/pgvector' PATH="/opt/opentenbase/install/bin:$PATH" PGPORT='65432' PG_REGRESS='../../src/test/regress/pg_regress' prove -I ../../src/test/perl/ -I .  -I ./test/perl test/t/*.pl
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Bailout called.  Further testing stopped:  system initdb failed
+FAILED--Further testing stopped: system initdb failed
+make: *** [prove_installcheck] Error 255
