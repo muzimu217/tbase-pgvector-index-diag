@@ -16,8 +16,8 @@ The validation test rejected malformed values for `ROW_COUNT`, `DIMS`,
 could run. The required injection case `ROW_COUNT="1;drop table x"` exited with
 status 2 and the message `ROW_COUNT must be a positive integer`.
 
-The patch applied cleanly into an empty temporary tree and produced a 210-line
-SQL file with SHA256:
+The W0 patch snapshot applied cleanly into an empty temporary tree and produced
+a 210-line SQL file with SHA256 (the delivery patch later changed in W1):
 
 ```text
 8344448a0769cb0c1177bc6b4d6ac86d526dd77e8047ea64c2c6bd9b7350f598
