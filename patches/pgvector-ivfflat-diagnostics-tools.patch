@@ -1,16 +1,28 @@
 diff --git a/contrib/pgvector/bench/ivfflat_diagnostics.sql b/contrib/pgvector/bench/ivfflat_diagnostics.sql
 new file mode 100644
-index 0000000..92d600b
+index 0000000..4dfe744
 --- /dev/null
 +++ b/contrib/pgvector/bench/ivfflat_diagnostics.sql
-@@ -0,0 +1,195 @@
+@@ -0,0 +1,210 @@
 +\set ON_ERROR_STOP on
 +
 +CREATE SCHEMA IF NOT EXISTS pgvector_bench;
 +
++CREATE TABLE IF NOT EXISTS pgvector_bench.schema_version (
++    version integer PRIMARY KEY,
++    applied_at timestamptz NOT NULL DEFAULT clock_timestamp(),
++    description text NOT NULL
++);
++
++INSERT INTO pgvector_bench.schema_version (version, applied_at, description)
++VALUES (1, clock_timestamp(), 'W0 correctness and security hardening')
++ON CONFLICT (version) DO UPDATE
++SET description = EXCLUDED.description;
++
 +CREATE OR REPLACE FUNCTION pgvector_bench.parse_memory_mb(value text)
 +RETURNS numeric
 +LANGUAGE plpgsql
++SET search_path = pg_catalog, pg_temp
 +AS $$
 +DECLARE
 +    cleaned text;
@@ -25,10 +37,10 @@ index 0000000..92d600b
 +    amount := substring(cleaned from '^[0-9]+[.]?[0-9]*')::numeric;
 +    unit := regexp_replace(cleaned, '^[0-9]+[.]?[0-9]*', '');
 +
-+    IF unit IN ('', 'mb') THEN
-+        RETURN amount;
-+    ELSIF unit IN ('kB', 'kb') THEN
++    IF unit IN ('', 'kb') THEN
 +        RETURN amount / 1024.0;
++    ELSIF unit = 'mb' THEN
++        RETURN amount;
 +    ELSIF unit = 'gb' THEN
 +        RETURN amount * 1024.0;
 +    ELSIF unit = 'tb' THEN
@@ -46,6 +58,7 @@ index 0000000..92d600b
 +)
 +RETURNS numeric
 +LANGUAGE plpgsql
++SET search_path = pg_catalog, pg_temp
 +AS $$
 +DECLARE
 +    vector_mb numeric;
@@ -75,6 +88,7 @@ index 0000000..92d600b
 +)
 +RETURNS integer
 +LANGUAGE plpgsql
++SET search_path = pg_catalog, pg_temp
 +AS $$
 +DECLARE
 +    factor numeric;
@@ -106,6 +120,7 @@ index 0000000..92d600b
 +    recommendation text
 +)
 +LANGUAGE plpgsql
++SET search_path = pg_catalog, pg_temp
 +AS $$
 +DECLARE
 +    effective_lists integer;
@@ -191,11 +206,11 @@ index 0000000..92d600b
 +    ns.nspname AS schema_name,
 +    tbl.relname AS table_name,
 +    idx.relname AS index_name,
-+    pg_relation_size(idx.oid) AS index_bytes,
-+    pg_get_indexdef(idx.oid) AS index_definition,
-+    CASE WHEN pg_get_indexdef(idx.oid) ILIKE '%USING ivfflat%' THEN 'ivfflat' ELSE 'other' END AS index_kind
-+FROM pg_class idx
-+JOIN pg_index i ON i.indexrelid = idx.oid
-+JOIN pg_class tbl ON tbl.oid = i.indrelid
-+JOIN pg_namespace ns ON ns.oid = tbl.relnamespace
-+WHERE pg_get_indexdef(idx.oid) ILIKE '%USING ivfflat%';
++    pg_catalog.pg_relation_size(idx.oid) AS index_bytes,
++    pg_catalog.pg_get_indexdef(idx.oid) AS index_definition,
++    CASE WHEN pg_catalog.pg_get_indexdef(idx.oid) ILIKE '%USING ivfflat%' THEN 'ivfflat' ELSE 'other' END AS index_kind
++FROM pg_catalog.pg_class idx
++JOIN pg_catalog.pg_index i ON i.indexrelid = idx.oid
++JOIN pg_catalog.pg_class tbl ON tbl.oid = i.indrelid
++JOIN pg_catalog.pg_namespace ns ON ns.oid = tbl.relnamespace
++WHERE pg_catalog.pg_get_indexdef(idx.oid) ILIKE '%USING ivfflat%';
