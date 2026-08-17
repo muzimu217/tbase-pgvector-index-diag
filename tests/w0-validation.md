@@ -41,4 +41,3 @@ rolled back after inspection.
 The run validates W0 correctness and security behavior only. It does not
 validate the deprecated first-generation IVFFlat build-memory estimate; that
 formula is replaced and measured separately in W1.
-
