@@ -12,3 +12,15 @@
 - [x] Run shell syntax and malicious-input tests.
 - [x] Validate the SQL patch structure and W0 static assertions.
 - [x] Review the staged diff without adding unrelated untracked documents.
+
+## W1 Memory Model
+
+- [x] Translate all 11 `ivfkmeans.c` allocation quantities.
+- [x] Translate `VECTOR_ARRAY_SIZE` with verified 32-byte header and 8-byte alignment.
+- [x] Separate target sample capacity from actual sampled rows.
+- [x] Preserve pgvector's `totalSize / MiB + 1` error-message rounding.
+- [x] Run three SQL smoke configurations.
+- [x] Match one real pgvector low-memory error exactly.
+- [x] Document the derivation and first-result limitations.
+- [x] Replace the deprecated formula in the delivery patch.
+- [ ] Run the W2 20-case prediction-versus-error matrix.

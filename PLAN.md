@@ -46,9 +46,25 @@ formula remains deprecated and must not support a production accuracy claim;
 W1 will replace it from the 11 source allocations in `ivfkmeans.c` and validate
 it against measured pgvector errors.
 
+## W1 source-derived memory model
+
+- Run ID: `index-diag-memory-model-v1`
+- Tier: `auxiliary/dev` until the W2 20-case matrix passes.
+- Question: does an exact translation of `ivfkmeans.c:277-299` reproduce the
+  memory requirement emitted by pgvector 0.8.0?
+- Primary signal: predicted `required_mb` equals the real low-memory build error.
+- Initial acceptance: all 11 components are exposed, three SQL smoke cases pass,
+  and at least one actual `CREATE INDEX` error matches exactly.
+- Scope: `vector` on the verified x86-64 OpenTenBase ABI; other vector types and
+  architectures remain outside the first claim.
+- Next gate: replace the deprecated formula in the delivery patch, then expand
+  to the W2 validation matrix with at least 20 cases and less than 5% error.
+
 ## Revision log
 
 | Date | Change | Reason |
 |---|---|---|
 | 2026-08-18 | Create W0 hardening contract | R006 requires project two to start immediately after R-1 through R-3 |
 | 2026-08-18 | Complete W0 validation | Input rejection, SQL patch application, and transactional OpenTenBase checks passed |
+| 2026-08-18 | Start W1 source-derived memory model | Source audit found that sample capacity and actual sample count use different bounds |
+| 2026-08-18 | Validate first real memory error | Predicted and observed requirement both equal 34 MB for 1000/128/1000 |
