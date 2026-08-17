@@ -1,5 +1,9 @@
 # pgvector 向量索引构建与诊断能力增强技术报告
 
+> 数据有效性说明：当前仓库中的第一版构建内存公式已被源码审查否决，不能用于
+> 生产容量判断。本文保留其过程记录；正式内存结论须以 W1 的源码逐项模型和实测
+> 验证矩阵为准。
+
 ## 1. 项目方向
 
 本阶段选择“项目二：向量索引构建与诊断能力增强”作为独立交付方向，目标是让 OpenTenBase/TDSQL-A 用户更容易发现以下问题：
@@ -21,7 +25,7 @@ patches/pgvector-ivfflat-diagnostics-tools.patch
 scripts/pgvector-index-diagnostics.sh
 docs/pgvector-index-diagnostics-report.md
 docs/pgvector-production-tuning-template.md
-docs/pgvector-ai-reproducible-sop.md
+SOP.md
 ```
 
 源码补丁新增：
@@ -145,7 +149,7 @@ scripts/pgvector-index-diagnostics.sh
 本地已完成函数级验证，结果文件：
 
 ```text
-docs/diagnostic-results/pgvector-diagnostics-local-validation.txt
+docs/pgvector-diagnostics-local-validation.txt
 ```
 
 验证环境：
