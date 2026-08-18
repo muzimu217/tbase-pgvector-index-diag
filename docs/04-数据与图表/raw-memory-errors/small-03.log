@@ -1,0 +1,10 @@
+NOTICE:  extension "vector" already exists, skipping
+CREATE EXTENSION
+DROP TABLE
+CREATE TABLE
+INSERT 0 10000
+SET
+NOTICE:  ivfflat index created with little data
+DETAIL:  This will cause low recall.
+HINT:  Drop the index until the table has more data.
+ERROR:  memory required is 4 MB, maintenance_work_mem is 3 MB

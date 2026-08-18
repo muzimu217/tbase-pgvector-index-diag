@@ -33,9 +33,54 @@ through to psql.
 USAGE
 }
 
+fail() {
+    printf 'error: %s\n' "$*" >&2
+    exit 2
+}
+
+validate_positive_integer() {
+    local name="$1"
+    local value="$2"
+
+    [[ "$value" =~ ^[1-9][0-9]*$ ]] || fail "$name must be a positive integer"
+}
+
+validate_optional_positive_integer() {
+    local name="$1"
+    local value="$2"
+
+    [[ -z "$value" ]] || validate_positive_integer "$name" "$value"
+}
+
+validate_target_recall() {
+    local value="$1"
+
+    [[ "$value" =~ ^(0[.][0-9]*[1-9][0-9]*|1([.]0+)?)$ ]] ||
+        fail "TARGET_RECALL must be in (0, 1]"
+}
+
+validate_memory_setting() {
+    local value="$1"
+
+    [[ -z "$value" ]] ||
+        [[ "$value" =~ ^[[:space:]]*[0-9]+([.][0-9]+)?[[:space:]]*([kKmMgGtT][bB])?[[:space:]]*$ ]] ||
+        fail "MAINTENANCE_WORK_MEM must be a number with an optional kB, MB, GB, or TB unit"
+}
+
 if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
     usage
     exit 0
+fi
+
+validate_positive_integer "ROW_COUNT" "$ROW_COUNT"
+validate_positive_integer "DIMS" "$DIMS"
+validate_optional_positive_integer "LISTS" "$LISTS"
+validate_optional_positive_integer "PROBES" "$PROBES"
+validate_target_recall "$TARGET_RECALL"
+validate_memory_setting "$MAINTENANCE_WORK_MEM"
+
+if [[ -n "$SQL_FILE" && ! -r "$SQL_FILE" ]]; then
+    fail "SQL_FILE is not readable: $SQL_FILE"
 fi
 
 psql_cmd() {
@@ -86,4 +131,3 @@ FROM pgvector_bench.ivfflat_index_inventory
 ORDER BY index_bytes DESC
 LIMIT 20;
 "
-

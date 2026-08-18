@@ -1,0 +1,12 @@
+bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+psql:/tmp/pgvector-index-diag-report/sql/02_memory_model.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:/tmp/pgvector-index-diag-report/sql/02_memory_model.sql:9: NOTICE:  relation "schema_version" already exists, skipping
+psql:/tmp/pgvector-index-diag-report/sql/04_catalog_introspect.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:/tmp/pgvector-index-diag-report/sql/04_catalog_introspect.sql:28: NOTICE:  view "ivfflat_index_inventory" does not exist, skipping
+psql:/tmp/pgvector-index-diag-report/sql/05_audit.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:/tmp/pgvector-index-diag-report/report/figures/data/audit-zero-param-full.sql:7: NOTICE:  extension "vector" already exists, skipping
+psql:/tmp/pgvector-index-diag-report/report/figures/data/audit-zero-param-full.sql:9: NOTICE:  table "audit_figure_case" does not exist, skipping
+psql:/tmp/pgvector-index-diag-report/report/figures/data/audit-zero-param-full.sql:15: NOTICE:  ivfflat index created with little data
+DETAIL:  This will cause low recall.
+HINT:  Drop the index until the table has more data.

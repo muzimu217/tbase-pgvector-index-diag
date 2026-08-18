@@ -1,0 +1,897 @@
+rm -rf /opt/opentenbase/src/OpenTenBase/contrib/pgvector/tmp_check
+cd . && TESTDIR='/opt/opentenbase/src/OpenTenBase/contrib/pgvector' PATH="/opt/opentenbase/install/bin:$PATH" PGPORT='65432' PG_REGRESS='../../src/test/regress/pg_regress' prove -I ../../src/test/perl/ -I .  -I ./test/perl test/t/*.pl
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/001_ivfflat_wal.pl line 6.
+BEGIN failed--compilation aborted at test/t/001_ivfflat_wal.pl line 6.
+test/t/001_ivfflat_wal.pl .................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/002_ivfflat_vacuum.pl line 3.
+BEGIN failed--compilation aborted at test/t/002_ivfflat_vacuum.pl line 3.
+test/t/002_ivfflat_vacuum.pl ................. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/003_ivfflat_vector_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/003_ivfflat_vector_build_recall.pl line 3.
+test/t/003_ivfflat_vector_build_recall.pl .... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/004_ivfflat_vector_insert_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/004_ivfflat_vector_insert_recall.pl line 3.
+test/t/004_ivfflat_vector_insert_recall.pl ... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/005_ivfflat_query_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/005_ivfflat_query_recall.pl line 3.
+test/t/005_ivfflat_query_recall.pl ........... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/006_ivfflat_lists.pl line 3.
+BEGIN failed--compilation aborted at test/t/006_ivfflat_lists.pl line 3.
+test/t/006_ivfflat_lists.pl .................. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/007_ivfflat_inserts.pl line 3.
+BEGIN failed--compilation aborted at test/t/007_ivfflat_inserts.pl line 3.
+test/t/007_ivfflat_inserts.pl ................ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/008_ivfflat_centers.pl line 3.
+BEGIN failed--compilation aborted at test/t/008_ivfflat_centers.pl line 3.
+test/t/008_ivfflat_centers.pl ................ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/009_ivfflat_filtering.pl line 3.
+BEGIN failed--compilation aborted at test/t/009_ivfflat_filtering.pl line 3.
+test/t/009_ivfflat_filtering.pl .............. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/010_hnsw_wal.pl line 6.
+BEGIN failed--compilation aborted at test/t/010_hnsw_wal.pl line 6.
+test/t/010_hnsw_wal.pl ....................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/011_hnsw_vacuum.pl line 3.
+BEGIN failed--compilation aborted at test/t/011_hnsw_vacuum.pl line 3.
+test/t/011_hnsw_vacuum.pl .................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/012_hnsw_vector_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/012_hnsw_vector_build_recall.pl line 3.
+test/t/012_hnsw_vector_build_recall.pl ....... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/013_hnsw_vector_insert_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/013_hnsw_vector_insert_recall.pl line 3.
+test/t/013_hnsw_vector_insert_recall.pl ...... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/014_hnsw_vector_vacuum_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/014_hnsw_vector_vacuum_recall.pl line 3.
+test/t/014_hnsw_vector_vacuum_recall.pl ...... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/015_hnsw_vector_duplicates.pl line 3.
+BEGIN failed--compilation aborted at test/t/015_hnsw_vector_duplicates.pl line 3.
+test/t/015_hnsw_vector_duplicates.pl ......... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/016_hnsw_inserts.pl line 3.
+BEGIN failed--compilation aborted at test/t/016_hnsw_inserts.pl line 3.
+test/t/016_hnsw_inserts.pl ................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/017_hnsw_filtering.pl line 3.
+BEGIN failed--compilation aborted at test/t/017_hnsw_filtering.pl line 3.
+test/t/017_hnsw_filtering.pl ................. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/018_aggregates.pl line 3.
+BEGIN failed--compilation aborted at test/t/018_aggregates.pl line 3.
+test/t/018_aggregates.pl ..................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/019_storage.pl line 3.
+BEGIN failed--compilation aborted at test/t/019_storage.pl line 3.
+test/t/019_storage.pl ........................ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/020_hnsw_bit_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/020_hnsw_bit_build_recall.pl line 3.
+test/t/020_hnsw_bit_build_recall.pl .......... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/021_hnsw_bit_insert_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/021_hnsw_bit_insert_recall.pl line 3.
+test/t/021_hnsw_bit_insert_recall.pl ......... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/022_hnsw_bit_vacuum_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/022_hnsw_bit_vacuum_recall.pl line 3.
+test/t/022_hnsw_bit_vacuum_recall.pl ......... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/023_hnsw_bit_duplicates.pl line 3.
+BEGIN failed--compilation aborted at test/t/023_hnsw_bit_duplicates.pl line 3.
+test/t/023_hnsw_bit_duplicates.pl ............ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/024_hnsw_halfvec_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/024_hnsw_halfvec_build_recall.pl line 3.
+test/t/024_hnsw_halfvec_build_recall.pl ...... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/025_hnsw_halfvec_insert_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/025_hnsw_halfvec_insert_recall.pl line 3.
+test/t/025_hnsw_halfvec_insert_recall.pl ..... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/026_hnsw_halfvec_vacuum_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/026_hnsw_halfvec_vacuum_recall.pl line 3.
+test/t/026_hnsw_halfvec_vacuum_recall.pl ..... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/027_hnsw_halfvec_duplicates.pl line 3.
+BEGIN failed--compilation aborted at test/t/027_hnsw_halfvec_duplicates.pl line 3.
+test/t/027_hnsw_halfvec_duplicates.pl ........ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/028_hnsw_sparsevec_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/028_hnsw_sparsevec_build_recall.pl line 3.
+test/t/028_hnsw_sparsevec_build_recall.pl .... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/029_hnsw_sparsevec_insert_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/029_hnsw_sparsevec_insert_recall.pl line 3.
+test/t/029_hnsw_sparsevec_insert_recall.pl ... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/030_hnsw_sparsevec_vacuum_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/030_hnsw_sparsevec_vacuum_recall.pl line 3.
+test/t/030_hnsw_sparsevec_vacuum_recall.pl ... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/031_hnsw_sparsevec_duplicates.pl line 3.
+BEGIN failed--compilation aborted at test/t/031_hnsw_sparsevec_duplicates.pl line 3.
+test/t/031_hnsw_sparsevec_duplicates.pl ...... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/032_ivfflat_halfvec_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/032_ivfflat_halfvec_build_recall.pl line 3.
+test/t/032_ivfflat_halfvec_build_recall.pl ... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/033_comparison.pl line 3.
+BEGIN failed--compilation aborted at test/t/033_comparison.pl line 3.
+test/t/033_comparison.pl ..................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/034_distance_functions.pl line 3.
+BEGIN failed--compilation aborted at test/t/034_distance_functions.pl line 3.
+test/t/034_distance_functions.pl ............. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/035_ivfflat_bit_build_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/035_ivfflat_bit_build_recall.pl line 3.
+test/t/035_ivfflat_bit_build_recall.pl ....... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/036_ivfflat_bit_centers.pl line 3.
+BEGIN failed--compilation aborted at test/t/036_ivfflat_bit_centers.pl line 3.
+test/t/036_ivfflat_bit_centers.pl ............ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/037_inputs.pl line 3.
+BEGIN failed--compilation aborted at test/t/037_inputs.pl line 3.
+test/t/037_inputs.pl ......................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/038_hnsw_sparsevec_vacuum_insert.pl line 3.
+BEGIN failed--compilation aborted at test/t/038_hnsw_sparsevec_vacuum_insert.pl line 3.
+test/t/038_hnsw_sparsevec_vacuum_insert.pl ... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/039_hnsw_cost.pl line 3.
+BEGIN failed--compilation aborted at test/t/039_hnsw_cost.pl line 3.
+test/t/039_hnsw_cost.pl ...................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/040_ivfflat_cost.pl line 3.
+BEGIN failed--compilation aborted at test/t/040_ivfflat_cost.pl line 3.
+test/t/040_ivfflat_cost.pl ................... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/041_ivfflat_iterative_scan.pl line 3.
+BEGIN failed--compilation aborted at test/t/041_ivfflat_iterative_scan.pl line 3.
+test/t/041_ivfflat_iterative_scan.pl ......... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/042_ivfflat_iterative_scan_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/042_ivfflat_iterative_scan_recall.pl line 3.
+test/t/042_ivfflat_iterative_scan_recall.pl .. 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/043_hnsw_iterative_scan.pl line 3.
+BEGIN failed--compilation aborted at test/t/043_hnsw_iterative_scan.pl line 3.
+test/t/043_hnsw_iterative_scan.pl ............ 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't locate IPC/Run.pm in @INC (@INC contains: /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl /opt/opentenbase/src/OpenTenBase/contrib/pgvector /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/../../src/test/perl/PostgresNode.pm line 91.
+Compilation failed in require at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+BEGIN failed--compilation aborted at /opt/opentenbase/src/OpenTenBase/contrib/pgvector/test/perl/PostgreSQL/Test/Cluster.pm line 3.
+Compilation failed in require at test/t/044_hnsw_iterative_scan_recall.pl line 3.
+BEGIN failed--compilation aborted at test/t/044_hnsw_iterative_scan_recall.pl line 3.
+test/t/044_hnsw_iterative_scan_recall.pl ..... 
+Dubious, test returned 2 (wstat 512, 0x200)
+No subtests run 
+
+Test Summary Report
+-------------------
+test/t/001_ivfflat_wal.pl                  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/002_ivfflat_vacuum.pl               (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/003_ivfflat_vector_build_recall.pl  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/004_ivfflat_vector_insert_recall.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/005_ivfflat_query_recall.pl         (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/006_ivfflat_lists.pl                (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/007_ivfflat_inserts.pl              (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/008_ivfflat_centers.pl              (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/009_ivfflat_filtering.pl            (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/010_hnsw_wal.pl                     (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/011_hnsw_vacuum.pl                  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/012_hnsw_vector_build_recall.pl     (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/013_hnsw_vector_insert_recall.pl    (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/014_hnsw_vector_vacuum_recall.pl    (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/015_hnsw_vector_duplicates.pl       (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/016_hnsw_inserts.pl                 (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/017_hnsw_filtering.pl               (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/018_aggregates.pl                   (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/019_storage.pl                      (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/020_hnsw_bit_build_recall.pl        (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/021_hnsw_bit_insert_recall.pl       (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/022_hnsw_bit_vacuum_recall.pl       (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/023_hnsw_bit_duplicates.pl          (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/024_hnsw_halfvec_build_recall.pl    (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/025_hnsw_halfvec_insert_recall.pl   (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/026_hnsw_halfvec_vacuum_recall.pl   (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/027_hnsw_halfvec_duplicates.pl      (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/028_hnsw_sparsevec_build_recall.pl  (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/029_hnsw_sparsevec_insert_recall.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/030_hnsw_sparsevec_vacuum_recall.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/031_hnsw_sparsevec_duplicates.pl    (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/032_ivfflat_halfvec_build_recall.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/033_comparison.pl                   (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/034_distance_functions.pl           (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/035_ivfflat_bit_build_recall.pl     (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/036_ivfflat_bit_centers.pl          (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/037_inputs.pl                       (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/038_hnsw_sparsevec_vacuum_insert.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/039_hnsw_cost.pl                    (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/040_ivfflat_cost.pl                 (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/041_ivfflat_iterative_scan.pl       (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/042_ivfflat_iterative_scan_recall.pl (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/043_hnsw_iterative_scan.pl          (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+test/t/044_hnsw_iterative_scan_recall.pl   (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+Files=44, Tests=0,  1 wallclock secs ( 0.06 usr  0.04 sys +  0.82 cusr  0.14 csys =  1.06 CPU)
+Result: FAIL
+make: *** [prove_installcheck] Error 1

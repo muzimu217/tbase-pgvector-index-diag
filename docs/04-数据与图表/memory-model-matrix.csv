@@ -1,0 +1,21 @@
+case_id,rows,dims,lists,tier,validation_mode,sample_rows,predicted_mb,old_formula_mb,observed_mb,error_pct,status,notes
+small-01,10000,128,10,small,real,10000,6,37,6,0.0000,pass,observed from raw-memory-errors/small-01.log
+small-02,10000,32,10,small,real,10000,2,34,2,0.0000,pass,observed from raw-memory-errors/small-02.log
+small-03,10000,64,20,small,real,10000,4,35,4,0.0000,pass,observed from raw-memory-errors/small-03.log
+small-04,10000,128,50,small,real,10000,8,37,8,0.0000,pass,observed from raw-memory-errors/small-04.log
+small-05,20000,128,100,small,real,10000,10,45,10,0.0000,pass,observed from raw-memory-errors/small-05.log
+small-06,50000,128,100,small,real,10000,10,103,10,0.0000,pass,observed from raw-memory-errors/small-06.log
+small-07,100000,128,100,small,real,10000,10,201,10,0.0000,pass,observed from raw-memory-errors/small-07.log
+small-08,100000,128,200,small,real,10000,14,206,14,0.0000,pass,observed from raw-memory-errors/small-08.log
+small-09,100000,128,500,small,real,25000,62,221,62,0.0000,pass,observed from raw-memory-errors/small-09.log
+small-10,100000,128,1000,small,real,50000,222,246,222,0.0000,pass,observed from raw-memory-errors/small-10.log
+small-11,100000,256,100,small,real,10000,15,396,15,0.0000,pass,observed from raw-memory-errors/small-11.log
+small-12,100000,256,1000,small,real,50000,248,442,248,0.0000,pass,observed from raw-memory-errors/small-12.log
+small-13,200000,384,1000,small,real,50000,273,1224,273,0.0000,pass,observed from raw-memory-errors/small-13.log
+small-14,200000,384,2000,small,real,100000,936,1275,936,0.0000,pass,observed from raw-memory-errors/small-14.log
+sat-01,500000,128,1000,saturated,real,50000,222,1028,222,0.0000,pass,observed from raw-memory-errors/sat-01.log
+old-fail-01,10000000,128,100,large,real-threshold,10000,10,19537,10,0.0000,pass,observed from raw-memory-errors/old-fail-01.log
+old-fail-02,1000000,1536,1000,large,real-threshold,50000,506,23494,506,0.0000,pass,observed from raw-memory-errors/old-fail-02.log
+old-fail-03,200000,384,8192,large,real-threshold,200000,7147,1594,7147,0.0000,pass,observed from raw-memory-errors/old-fail-03.log
+old-fail-04,100000,128,32768,large,real-threshold,100000,17459,1850,17459,0.0000,pass,observed from raw-memory-errors/old-fail-04.log
+large-05,100000,768,4000,large,real-threshold,100000,2211,1384,2211,0.0000,pass,observed from raw-memory-errors/large-05.log
