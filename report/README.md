@@ -27,3 +27,5 @@
 ## 写作边界
 
 5 个 `real-threshold` 场景只证明阈值触发路径中的后端报错与模型一致，不是巨型索引已成功构建；`possible_seqscan` 是静态目录风险，不是 EXPLAIN 结果；HNSW 的 IVFFlat 专属字段保持空值；`reltuples` 是统计估计。
+
+构建命令为 `PYTHON_BIN=python3 bash report/build.sh`。`PYTHON_BIN` 只用于选择本机已有的 Python 3 运行时；该运行时需要提供 Pillow 和 ReportLab，脚本本身不依赖仓库外的固定绝对路径。
