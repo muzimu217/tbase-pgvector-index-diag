@@ -77,7 +77,7 @@ it against measured pgvector errors.
   arrays are allocated, so it is not a claim that a giant index was built. The
   CSV, raw stderr, and `docs/04-数据与图表/SHA256SUMS` are now the candidate
   evidence package for the G4 review, which R009 formally passed. The endpoint was
-  `root@45.202.199.140` / OpenTenBase 5.0 commit `0915c04e4` / Coordinator
+  authorized dev-server (address redacted) / OpenTenBase 5.0 commit `0915c04e4` / Coordinator
   `22201` / pgvector `0.8.0`.
 
 ## R-12 zero-parameter audit
