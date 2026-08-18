@@ -1,0 +1,2 @@
+pgvector_bench	audit_figure_case	audit_figure_hnsw_idx	hnsw	1000	3				64	ok		f	HNSW is inventoried; IVFFlat-only memory and probes checks are not applied
+pgvector_bench	audit_figure_case	audit_figure_ivf_idx	ivfflat	1000	3	10	1	1	64	warn	4	f	catalog-derived parameters are available; validate with representative EXPLAIN and recall tests
