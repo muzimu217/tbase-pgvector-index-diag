@@ -6,7 +6,7 @@ Environment:
 
 Command:
   psql -X -v ON_ERROR_STOP=1 -d postgres \
-    -f /Users/blackevil/Documents/申请书/OpenTenBase-source/contrib/pgvector/bench/ivfflat_diagnostics.sql
+    -f <OpenTenBase-source-root>/contrib/pgvector/bench/ivfflat_diagnostics.sql
 
 Memory parser and list/memory estimator:
   SELECT
@@ -42,7 +42,7 @@ Output:
 Script-level validation:
   DBNAME=postgres ROW_COUNT=100000 DIMS=128 LISTS=1000 PROBES=10 \
     TARGET_RECALL=0.90 MAINTENANCE_WORK_MEM=64MB \
-    SQL_FILE=/Users/blackevil/Documents/申请书/OpenTenBase-source/contrib/pgvector/bench/ivfflat_diagnostics.sql \
+    SQL_FILE=<OpenTenBase-source-root>/contrib/pgvector/bench/ivfflat_diagnostics.sql \
     scripts/pgvector-index-diagnostics.sh
 
 Output summary:
