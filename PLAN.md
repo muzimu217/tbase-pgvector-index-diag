@@ -60,6 +60,19 @@ it against measured pgvector errors.
 - Next gate: replace the deprecated formula in the delivery patch, then expand
   to the W2 validation matrix with at least 20 cases and less than 5% error.
 
+## W2 validation harness
+
+- Matrix: `tests/memory-model-matrix.tsv` (20 fixed configurations, including
+  the four old-formula failure cases required by T2.2.3).
+- Runner: `tools/validate_memory_model.sh`.
+- `MODE=auto` is intentionally conservative: it falls back to model-only output
+  when no database endpoint is reachable. It never calls a model value observed.
+- `MODE=real` is for small/saturated cases that can create an index safely.
+  `MODE=indirect` is for large cases and requires captured backend stderr plus a
+  note describing the lowered `maintenance_work_mem` threshold method.
+- G4 remains open until at least 20 captured `memory required is X MB` values
+  have absolute relative error below 5%.
+
 ## Revision log
 
 | Date | Change | Reason |

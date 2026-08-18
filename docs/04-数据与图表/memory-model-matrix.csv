@@ -1,0 +1,21 @@
+case_id,rows,dims,lists,tier,validation_mode,sample_rows,predicted_mb,old_formula_mb,observed_mb,error_pct,status,notes
+small-01,1000,8,10,small,model-only,1000,1,33,,,blocked,no captured pgvector error; model-only run
+small-02,10000,32,10,small,model-only,10000,2,34,,,blocked,no captured pgvector error; model-only run
+small-03,10000,64,20,small,model-only,10000,4,35,,,blocked,no captured pgvector error; model-only run
+small-04,10000,128,50,small,model-only,10000,8,37,,,blocked,no captured pgvector error; model-only run
+small-05,20000,128,100,small,model-only,10000,10,45,,,blocked,no captured pgvector error; model-only run
+small-06,50000,128,100,small,model-only,10000,10,103,,,blocked,no captured pgvector error; model-only run
+small-07,100000,128,100,small,model-only,10000,10,201,,,blocked,no captured pgvector error; model-only run
+small-08,100000,128,200,small,model-only,10000,14,206,,,blocked,no captured pgvector error; model-only run
+small-09,100000,128,500,small,model-only,25000,62,221,,,blocked,no captured pgvector error; model-only run
+small-10,100000,128,1000,small,model-only,50000,222,246,,,blocked,no captured pgvector error; model-only run
+small-11,100000,256,100,small,model-only,10000,15,396,,,blocked,no captured pgvector error; model-only run
+small-12,100000,256,1000,small,model-only,50000,248,442,,,blocked,no captured pgvector error; model-only run
+small-13,200000,384,1000,small,model-only,50000,273,1224,,,blocked,no captured pgvector error; model-only run
+small-14,200000,384,2000,small,model-only,100000,936,1275,,,blocked,no captured pgvector error; model-only run
+sat-01,500000,128,1000,saturated,model-only,50000,222,1028,,,blocked,no captured pgvector error; model-only run
+old-fail-01,10000000,128,100,large,model-only,10000,10,19537,,,blocked,no captured pgvector error; model-only run
+old-fail-02,1000000,1536,1000,large,model-only,50000,506,23494,,,blocked,no captured pgvector error; model-only run
+old-fail-03,200000,384,8192,large,model-only,200000,7147,1594,,,blocked,no captured pgvector error; model-only run
+old-fail-04,100000,128,32768,large,model-only,100000,17459,1850,,,blocked,no captured pgvector error; model-only run
+large-05,100000,768,4000,large,model-only,100000,2211,1384,,,blocked,no captured pgvector error; model-only run
