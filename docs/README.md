@@ -25,3 +25,8 @@
 - [ ] `docs/pgvector-index-diagnostics-report.md` → 拆分：正确性存疑的公式结论撤回（按 R001 P0-4），事实性过程记录并入 `03-技术文档/`，旧公式内容仅作"被推翻的第一版"证据保留
 - [ ] `docs/pgvector-production-tuning-template.md` → `03-技术文档/参数调优说明.md` 的底稿（参数须先按 G3 修正）
 - [ ] `docs/pgvector-diagnostics-local-validation.txt` → `04-数据与图表/`（路径修正见 T2.0.2）
+
+## 汇报交付物
+
+- [x] [`07-演示文稿/index-diagnostics.pptx`](07-演示文稿/index-diagnostics.pptx)：15 页，覆盖模型校正、G4/G10、TAP 发现、边界与复现链。
+- [x] [`08-视频脚本/index-diagnostics.md`](08-视频脚本/index-diagnostics.md)：约 6 分钟录制脚本与画面提示。
