@@ -76,9 +76,25 @@ it against measured pgvector errors.
   `min(rows, max(lists*50, 10000))` and checks the pgvector error before giant
   arrays are allocated, so it is not a claim that a giant index was built. The
   CSV, raw stderr, and `docs/04-数据与图表/SHA256SUMS` are now the candidate
-  evidence package for G4 review. The endpoint was
+  evidence package for the G4 review, which R009 formally passed. The endpoint was
   `root@45.202.199.140` / OpenTenBase 5.0 commit `0915c04e4` / Coordinator
   `22201` / pgvector `0.8.0`.
+
+## R-12 zero-parameter audit
+
+- `sql/04_catalog_introspect.sql` builds `vector_index_catalog` from
+  `pg_class.reloptions`, `pg_index.indkey`, `pg_attribute.atttypmod`,
+  `pg_class.reltuples`, `pg_relation_size()`, and `pg_am.amname`.
+- `sql/05_audit.sql` exposes `audit_all_vector_indexes()` with zero arguments.
+  It reports one row per IVFFlat or HNSW vector index, official IVFFlat lists,
+  the source-derived build-memory estimate where applicable, current
+  `maintenance_work_mem`, a risk level, a starting probes value, and a
+  conservative static `possible_seqscan` flag. The flag is not an EXPLAIN claim.
+- R-12 smoke result: OpenTenBase 5.0 / pgvector 0.8.0 returned two rows from a
+  1000-row table: one HNSW row and one IVFFlat row with `rows=1000`, `dims=3`,
+  `lists=10`; `pronargs=0`; transaction ended with `ROLLBACK`.
+- Raw output: `tests/audit-zero-param-20260818.log` (SHA256 recorded in the
+  revision log and commit).
 
 ## Revision log
 
@@ -88,3 +104,4 @@ it against measured pgvector errors.
 | 2026-08-18 | Complete W0 validation | Input rejection, SQL patch application, and transactional OpenTenBase checks passed |
 | 2026-08-18 | Start W1 source-derived memory model | Source audit found that sample capacity and actual sample count use different bounds |
 | 2026-08-18 | Validate first real memory error | Predicted and observed requirement both equal 34 MB for 1000/128/1000 |
+| 2026-08-18 | Complete R-12 zero-parameter audit smoke | Catalog-derived IVFFlat/HNSW rows and zero-argument audit passed on OpenTenBase |

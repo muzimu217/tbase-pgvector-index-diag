@@ -13,6 +13,38 @@ VALUES (2, clock_timestamp(), 'Source-derived IVFFlat build memory model')
 ON CONFLICT (version) DO UPDATE
 SET description = EXCLUDED.description;
 
+CREATE OR REPLACE FUNCTION pgvector_bench.parse_memory_mb(value text)
+RETURNS numeric
+LANGUAGE plpgsql
+SET search_path = pg_catalog, pg_temp
+AS $$
+DECLARE
+    cleaned text;
+    amount numeric;
+    unit text;
+BEGIN
+    IF value IS NULL OR btrim(value) = '' THEN
+        RETURN NULL;
+    END IF;
+
+    cleaned := lower(regexp_replace(btrim(value), '\s+', '', 'g'));
+    amount := substring(cleaned from '^[0-9]+[.]?[0-9]*')::numeric;
+    unit := regexp_replace(cleaned, '^[0-9]+[.]?[0-9]*', '');
+
+    IF unit IN ('', 'kb') THEN
+        RETURN amount / 1024.0;
+    ELSIF unit = 'mb' THEN
+        RETURN amount;
+    ELSIF unit = 'gb' THEN
+        RETURN amount * 1024.0;
+    ELSIF unit = 'tb' THEN
+        RETURN amount * 1024.0 * 1024.0;
+    ELSE
+        RAISE EXCEPTION 'unsupported memory unit in %', value;
+    END IF;
+END;
+$$;
+
 CREATE OR REPLACE FUNCTION pgvector_bench.ivfflat_vector_array_size(
     array_length bigint,
     item_size bigint
@@ -120,3 +152,33 @@ IS 'Eleven allocations from pgvector src/ivfkmeans.c:277-288 for vector IVFFlat 
 
 COMMENT ON FUNCTION pgvector_bench.estimate_ivfflat_build_memory_mb(bigint, integer, integer)
 IS 'Matches pgvector ivfkmeans.c error-message rounding: totalSize / MiB + 1';
+
+CREATE OR REPLACE FUNCTION pgvector_bench.recommend_ivfflat_lists(
+    row_count bigint,
+    dims integer DEFAULT 128
+)
+RETURNS integer
+LANGUAGE plpgsql
+SET search_path = pg_catalog, pg_temp
+AS $$
+DECLARE
+    recommended numeric;
+BEGIN
+    IF row_count <= 0 THEN
+        RAISE EXCEPTION 'row_count must be positive';
+    END IF;
+    IF dims <= 0 THEN
+        RAISE EXCEPTION 'dims must be positive';
+    END IF;
+
+    recommended := CASE
+        WHEN row_count <= 1000000 THEN CEIL(row_count::numeric / 1000.0)
+        ELSE CEIL(SQRT(row_count::numeric))
+    END;
+
+    RETURN GREATEST(1, LEAST(32768, recommended)::integer);
+END;
+$$;
+
+COMMENT ON FUNCTION pgvector_bench.recommend_ivfflat_lists(bigint, integer)
+IS 'Official starting heuristic: rows/1000 up to 1M rows, sqrt(rows) above 1M, capped at IVFFLAT_MAX_LISTS=32768';

@@ -1,0 +1,16 @@
+psql:sql/02_memory_model.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:sql/02_memory_model.sql:9: NOTICE:  relation "schema_version" already exists, skipping
+psql:sql/04_catalog_introspect.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:sql/04_catalog_introspect.sql:28: NOTICE:  view "ivfflat_index_inventory" does not exist, skipping
+psql:sql/05_audit.sql:3: NOTICE:  schema "pgvector_bench" already exists, skipping
+psql:tests/sql/002_audit_zero_param.sql:8: NOTICE:  extension "vector" already exists, skipping
+psql:tests/sql/002_audit_zero_param.sql:9: NOTICE:  table "audit_zero_param_case" does not exist, skipping
+psql:tests/sql/002_audit_zero_param.sql:24: NOTICE:  ivfflat index created with little data
+DETAIL:  This will cause low recall.
+HINT:  Drop the index until the table has more data.
+        index_name         | index_type | row_count | dims | lists | recommended_lists | risk_level | recommended_probes | possible_seqscan 
+---------------------------+------------+-----------+------+-------+-------------------+------------+--------------------+------------------
+ audit_zero_param_hnsw_idx | hnsw       |      1000 |    3 |       |                   | ok         |                    | f
+ audit_zero_param_ivf_idx  | ivfflat    |      1000 |    3 |    10 |                 1 | warn       |                  4 | f
+(2 rows)
+

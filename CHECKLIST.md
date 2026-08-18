@@ -27,3 +27,12 @@
 - [x] Define the W2 20-case matrix and resource-aware validation harness (`tools/validate_memory_model.sh`).
 - [x] Add database-independent matrix self-test for case count and source-derived values.
 - [x] Capture OpenTenBase backend stderr for all 20 cases and verify error below 5% (large cases use real-threshold mode before giant allocations).
+
+## W2 Zero-Parameter Audit
+
+- [x] Introspect vector indexes from `pg_class`, `pg_index`, `pg_attribute`, `pg_type`, and `pg_am`.
+- [x] Parse IVFFlat `lists` from `pg_class.reloptions` and vector dimensions from `atttypmod`.
+- [x] Add zero-argument `audit_all_vector_indexes()` with IVFFlat and HNSW rows.
+- [x] Return static risk fields without presenting them as an `EXPLAIN` result.
+- [x] Run the OpenTenBase transaction smoke with one IVFFlat and one HNSW index.
+- [x] Archive the raw zero-parameter audit output and its SHA256.

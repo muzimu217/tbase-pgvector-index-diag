@@ -1,6 +1,11 @@
 ecc6573e39a03d13bef5a01ccd871fca77ac4ef46fed791c9fbcb9bd4d60b0d8  memory-model-matrix.csv
-3d22bd1997ee4d48a469644acc0bd8d50f3e5ea218fea8a264e272e8f5c1dc46  ../03-技术文档/预测与实测验证矩阵.md
+7b882d52cc533e26a5f9db92e20520e1576f851fb68c544a063bc6e84a6b5223  ../03-技术文档/预测与实测验证矩阵.md
 c8ca16537a07f96d5b1d57a014f8aeccd538d05e17bc22e1507f4c3a35d16bcf  ../../tests/memory-model-matrix.tsv
+14da8373ae8f36b91f74ff52abf1bd900c451de1c17eb89d86e1e06699d105e7  ../../tests/audit-zero-param-20260818.log
+839ddf35763baa318c84bb906fc88427793f32371e14c931a555fe1d3634dd9b  ../../sql/02_memory_model.sql
+7ad74137734245936d9774022dfe91b6b814cf1a83fd4c31c1265f9fec1939b7  ../../sql/04_catalog_introspect.sql
+3fcb81bfe1eb57f7b059c66a3f77b8137d406fe50631e5393855278fac5b2594  ../../sql/05_audit.sql
+c9c9e45f37f441630b3620085500df74102f77a3a7bb60149285511bf6b12f8c  ../../tests/sql/002_audit_zero_param.sql
 a12248e8188f024544c89e8e1e124c327c280b98c9c93f7673650d9d885a7721  raw-memory-errors/large-05.log
 80bc0e25e88e5addeeeaa64db0a62a08e4693957c06f9851086dd04f4b48bbf2  raw-memory-errors/old-fail-01.log
 3234fb65266eeea33b8232827ccc20fb774d00991866e5518aeba8be89dcde45  raw-memory-errors/old-fail-02.log

@@ -30,3 +30,16 @@ SOP.md
 - `recommend_ivfflat_lists(...)`
 - `ivfflat_index_inventory`
 - 低内存、低 probes、高 probes、索引清单验证。
+
+## 零参数体检
+
+在目标数据库中依次加载 `sql/02_memory_model.sql`、
+`sql/04_catalog_introspect.sql` 和 `sql/05_audit.sql`，然后运行：
+
+```sql
+SELECT * FROM pgvector_bench.audit_all_vector_indexes();
+```
+
+该入口从系统目录自动提取 IVFFlat/HNSW 索引的表名、行数估计、向量维度、
+索引类型和 IVFFlat lists；输出中的 `possible_seqscan` 是静态目录风险提示，
+不是对某条查询的 `EXPLAIN` 结论。
