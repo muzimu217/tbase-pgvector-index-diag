@@ -23,7 +23,7 @@
 - [x] Match one real pgvector low-memory error exactly.
 - [x] Document the derivation and first-result limitations.
 - [x] Replace the deprecated formula in the delivery patch.
-- [ ] Run the W2 20-case prediction-versus-error matrix.
-- [~] Define the W2 20-case matrix and resource-aware validation harness (`tools/validate_memory_model.sh`).
+- [x] Run the W2 20-case prediction-versus-error matrix.
+- [x] Define the W2 20-case matrix and resource-aware validation harness (`tools/validate_memory_model.sh`).
 - [x] Add database-independent matrix self-test for case count and source-derived values.
-- [ ] Capture OpenTenBase backend stderr for all 20 cases and verify error below 5%.
+- [x] Capture OpenTenBase backend stderr for all 20 cases and verify error below 5% (large cases use real-threshold mode before giant allocations).

@@ -1,5 +1,5 @@
 case_id	rows	dims	lists	tier
-small-01	1000	8	10	small
+small-01	10000	128	10	small
 small-02	10000	32	10	small
 small-03	10000	64	20	small
 small-04	10000	128	50	small

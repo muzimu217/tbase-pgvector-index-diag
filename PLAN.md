@@ -70,8 +70,15 @@ it against measured pgvector errors.
 - `MODE=real` is for small/saturated cases that can create an index safely.
   `MODE=indirect` is for large cases and requires captured backend stderr plus a
   note describing the lowered `maintenance_work_mem` threshold method.
-- G4 remains open until at least 20 captured `memory required is X MB` values
-  have absolute relative error below 5%.
+- R-11 run result: 20/20 cases captured the pgvector error value with absolute
+  relative error `0.0000%`; 15 small/saturated cases used `real` mode and all
+  five large cases used `real-threshold` mode. The latter caps inserted rows at
+  `min(rows, max(lists*50, 10000))` and checks the pgvector error before giant
+  arrays are allocated, so it is not a claim that a giant index was built. The
+  CSV, raw stderr, and `docs/04-数据与图表/SHA256SUMS` are now the candidate
+  evidence package for G4 review. The endpoint was
+  `root@45.202.199.140` / OpenTenBase 5.0 commit `0915c04e4` / Coordinator
+  `22201` / pgvector `0.8.0`.
 
 ## Revision log
 

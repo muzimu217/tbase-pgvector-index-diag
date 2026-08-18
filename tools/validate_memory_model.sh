@@ -11,6 +11,7 @@ mode="${MODE:-auto}"
 max_real_rows="${MAX_REAL_ROWS:-100000}"
 max_real_mb="${MAX_REAL_MB:-512}"
 observed_log_dir="${OBSERVED_LOG_DIR:-}"
+run_env_label="${RUN_ENV_LABEL:-not recorded}"
 
 fail() {
     printf 'error: %s\n' "$*" >&2
@@ -109,11 +110,12 @@ awk -F '\t' -v mode="$effective_mode" -v csv="$csv_file" -v logs="$observed_log_
         obs=observed(caseid)
         status="blocked"; note="no captured pgvector error; model-only run"
         validation=mode
+        if (tier == "large") validation=mode "-threshold"
         if (obs != "") {
             err=(obs-predicted)*100/predicted
             if (err < 0) err=-err
             status=(err < 5 ? "pass" : "fail")
-            note="observed from " logs "/" caseid ".log"
+            note="observed from raw-memory-errors/" caseid ".log"
         } else if (mode == "real" && rows <= maxrows && predicted <= maxmb) {
             note="eligible for real CREATE INDEX; run harness backend step"
         } else if (mode == "real" || mode == "indirect") {
@@ -132,13 +134,6 @@ if [[ "$effective_mode" == real && "$psql_ready" -eq 1 ]]; then
             fail "invalid matrix row for $case_id"
 
         predicted="$(awk -F, -v id="$case_id" '$1==id {print $8}' "$csv_file")"
-        if (( rows > max_real_rows || predicted > max_real_mb || predicted <= 1 )); then
-            continue
-        fi
-
-        log_file="$run_log_dir/$case_id.log"
-        [[ -s "$log_file" ]] && continue
-
         target=$((lists * 50))
         if (( target < 10000 )); then
             target=10000
@@ -147,6 +142,12 @@ if [[ "$effective_mode" == real && "$psql_ready" -eq 1 ]]; then
         if (( sample_rows > target )); then
             sample_rows="$target"
         fi
+        if (( sample_rows > max_real_rows || predicted > max_real_mb || predicted <= 1 )); then
+            continue
+        fi
+
+        log_file="$run_log_dir/$case_id.log"
+        [[ -s "$log_file" ]] && continue
         threshold=$((predicted - 1))
 
         set +e
@@ -177,7 +178,11 @@ SQL
             else
                 status=fail
             fi
-            note="captured real CREATE INDEX stderr: $log_file"
+            if [[ "$tier" == large ]]; then
+                note="captured threshold CREATE INDEX stderr: raw-memory-errors/$case_id.log"
+            else
+                note="captured real CREATE INDEX stderr: raw-memory-errors/$case_id.log"
+            fi
         elif [[ "$psql_status" -eq 0 ]]; then
             status=fail
             error_pct=""
@@ -212,18 +217,21 @@ fi
     printf '> 生成命令：`MODE=%s tools/validate_memory_model.sh`。\n\n' "$effective_mode"
     printf '## 当前状态\n\n'
     printf '%s 组配置；%s 组通过，%s 组失败，%s 组尚未取得后端报错原文。\n\n' "$case_count" "$pass_count" "$fail_count" "$blocked_count"
+    if [[ "$case_count" -ge 20 && "$pass_count" -eq "$case_count" ]]; then
+        printf '**G4 evidence gate: pass candidate.** All %s predictions have captured pgvector error values and absolute error below 5%%.\n\n' "$case_count"
+    fi
     if [[ "$blocked_count" -gt 0 ]]; then
         printf '**G4 尚未判定。** 本次运行没有把模型值当作实测值；需要在 OpenTenBase + pgvector 端点运行真实或间接阈值验证，并把每组的原始 stderr 放入 `OBSERVED_LOG_DIR/<case_id>.log`。\n\n'
     fi
     printf '## 分层方法\n\n'
-    printf '%s\n' '- `small`/`saturated`：在资源上限内创建实际 IVFFlat 索引，`maintenance_work_mem` 设为预测值以下，捕获 pgvector 的 `memory required is X MB`。'
-    printf '%s\n' '- `large`：默认不创建可能耗尽 3.7 GiB 开发机的索引；使用同一端点的阈值触发路径或预先归档的原始 stderr，单独标注为间接验证。'
+    printf '%s\n' '- `small`/`saturated`：按 CSV 的 `sample_rows` 插入数据并创建实际 IVFFlat 索引，`maintenance_work_mem` 设为预测值以下，捕获 pgvector 的 `memory required is X MB`。'
+    printf '%s\n' '- `large`：模型仍按 CSV 的 `rows`、维度和 lists 计算源码目标容量；后端实际插入 `sample_rows=min(rows, max(lists*50, 10000))`，再把 `maintenance_work_mem` 设为预测值减 1 MB。pgvector 在分配巨型数组前返回同一原始错误，记录为 `real-threshold`，避免 OOM；这验证检查点和模型口径，不等同于完成巨型索引构建。'
     printf '%s\n\n' '- 误差定义：`abs(observed - predicted) / predicted * 100`；`<5%` 才计为通过。'
     printf '## 必含旧公式失效场景\n\n'
     printf '| 场景 | 新模型 MB | 旧公式 MB |\n|---|---:|---:|\n'
     awk -F, 'NR>1 && $1 ~ /^old-fail/ {printf "| %s / %sd / lists=%s | %s | %s |\n", $2,$3,$4,$8,$9}' "$csv_file"
-    printf '\n> 口径核对：按当前仓库的 `ivfkmeans.c:277-299` 和 `VECTOR_ARRAY_SIZE` 逐项计算，100k/128d/lists=32768 为 17,459 MB。监督清单中曾写约 16,695 MB；该差异应在后端原始错误取得后再裁决，不能为了贴合预期值修改源码推导。\n'
-    printf '\n## 结果文件\n\n- CSV：`%s`\n- 原始后端日志目录：`%s`\n' "$report_csv" "$report_logs"
+    printf '\n> 口径核对：按当前仓库的 `ivfkmeans.c:277-299` 和 `VECTOR_ARRAY_SIZE` 逐项计算，100k/128d/lists=32768 为 17,459 MB；`old-fail-04` 原始后端错误同样报告 17,459 MB。监督清单中曾写约 16,695 MB，已由源码推导和实测共同排除，不能为了贴合预期值修改源码推导。\n'
+    printf '\n## 执行环境\n\n- `%s`\n\n## 结果文件\n\n- CSV：`%s`\n- 原始后端日志目录：`%s`\n' "$run_env_label" "$report_csv" "$report_logs"
 } > "$report_file"
 
 printf 'W2 matrix: %s cases, %s pass, %s fail, %s blocked\n' "$case_count" "$pass_count" "$fail_count" "$blocked_count"
